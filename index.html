@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.js' integrity='sha512-SXo2rCaEJmbAPoxtaSjW+/hLaVCMAJ1CX8XnIP02x6/LIaWQp4GipKxQhBwL8Tn5U/K+lD9AaM4f4mXJdKnDQw==' crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.min.js' integrity='sha512-Pdnl+dKWHA0jEnmhogUHlOw3FqDeujiEc3XQDkvMrPUAvytiU2cZiknw2xDPgDS+u2prg2n+6eKz3CPG588gTQ==' crossorigin='anonymous'></script>
+  <script src="app.js" defer></script>
+  <title>Document</title>
+</head>
+<style>
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
+<body>
+
+  <div id="app">
+
+
+    <div class="container">
+      <div class="row">
+        <h1>Queste sono le foto del video musicale</h1>
+        <div class="col"
+          v-for="(img, index) in allMVimg"
+          :key="index">
+          <div class="card" style="width: 18rem;">
+            <img :src="mediaUrl + img.url" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h1>Queste sono i video del video musicale</h1>
+        <div class="col"
+          v-for="(img, index) in allMVvideos"
+          :key="index">
+          <div class="card" style="width: 18rem;">
+            <video :src="mediaUrl + img.url" controls></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h1>Queste sono i video di Whatsapp</h1>
+        <div class="col"
+          v-for="(img, index) in allWAvideos"
+          :key="index">
+          <div class="card" style="width: 18rem;">
+            <video :src="mediaUrl + img.url" controls></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h1>Queste sono le foto di Whatsapp</h1>
+        <div class="col"
+          v-for="(img, index) in allWAimg"
+          :key="index">
+          <div class="card" style="width: 18rem;">
+            <img :src="mediaUrl + img.url" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+  
+
+</body>
+</html>
